@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 
@@ -19,10 +19,10 @@ export default function Home() {
       </Head>
       <nav className={`${inter.className} ${styles.mainnav}`}>
         <ul>
-          <li>Home</li>
-          <li>Questions</li>
-          <li>About</li>
-          <li>Support</li>
+          <Link href='/' scroll={false}><li>Home</li></Link>
+          <Link href='/questions' scroll={false}><li>Questions</li></Link>
+          <Link href='/about' scroll={false}><li>About</li></Link>
+          <Link href='/support' scroll={false}><li>Support</li></Link>
         </ul>
       </nav>
       <main className={`${inter.className} ${styles.main}`}>
@@ -57,7 +57,7 @@ export default function Home() {
           <div className={styles.blogItem}>
             <h3>How do I undo the most recent local commits in Git?</h3>
             <p>
-              I accidentally committed the wrong files to Git, but didn't push
+              I accidentally committed the wrong files to Git, but didn&apos;t push
               the commit to the server yet. How do I undo those commits from the
               local repository?
             </p>
